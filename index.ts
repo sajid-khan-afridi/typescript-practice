@@ -92,12 +92,47 @@
 // }
 // printID(12);
 // printID("hello");
-function welcomePeople(x: string | string[]) {
-  if (Array.isArray(x)) {
-    console.log(`hello ${x.join(" and ")}`);
-  } else {
-    console.log(`hello ${x}`);
-  }
+
+// function welcomePeople(x: string | string[]) {
+//   if (Array.isArray(x)) {
+//     console.log(`hello ${x.join(" and ")}`);
+//   } else {
+//     console.log(`hello ${x}`);
+//   }
+// }
+// welcomePeople("Alex");
+// welcomePeople(["Alex", "Briden"]);
+
+// function getFirstThree(x: number[] | string) {
+//   return x.slice(0, 3);
+// }
+// let result = getFirstThree("hello");
+// result = getFirstThree([1, 2, 3, 4, 5, 6, 7]);
+// console.log(result);
+
+// // //Type Aliases
+// type point = {
+//   x: number;
+//   y: number;
+// };
+// function objFunction(pt: point) {
+//   console.log(pt.x);
+//   console.log(pt.y);
+// }
+// objFunction({ x: 100, y: 200 });
+
+// // Interfaces
+interface point {
+  x: number;
+  y: number;
 }
-welcomePeople("Alex");
-welcomePeople(["Alex", "Briden"]);
+function objFunction(pt: point) {
+  console.log(pt.x);
+  console.log(pt.y);
+}
+objFunction({ x: 100, y: 200 });
+
+// Differences Between Type Aliases and Interfaces
+/*the key distinction is that a type cannot be re-opened to add new properties vs an interface which is always extendable.*/
+
+//// Type Assertions

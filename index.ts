@@ -49,10 +49,55 @@
 // obj = "hello";
 // let n: number = obj;
 
-const names = ["alice", "bary", "crist"];
-// names.forEach((n) => {
-//   console.log(n.toUpperCase());
+// const names = ["alice", "bary", "crist"];
+// // names.forEach((n) => {
+// //   console.log(n.toUpperCase());
 
-names.forEach(function (s: string) {
-  console.log(s.toUppercase());
-});
+// names.forEach(function (s) {
+//   console.log(s.toUpperCase());
+// });
+
+// //Optional Properties
+// obj: {
+//   first: string,
+//   last?: string | undefined,
+// }
+// function printName(obj: { first: string; last?: string }) {
+//   // Error - might crash if 'obj.last' wasn't provided!
+//   console.log(obj.last.toUpperCase());
+//   //Object is possibly 'undefined'.
+//   if (obj.last !== undefined) {
+//     // OK
+//     console.log(obj.last.toUpperCase());
+//   }
+
+//   // A safe alternative using modern JavaScript syntax:
+//   console.log(obj.last?.toUpperCase());
+// }
+// // Both OK
+// printName({ first: "Bob" });
+// printName({ first: "Alice", last: "Alisson" });
+
+// // //Union Types
+// function printID(id: number | string) {
+//   //console.log(id);
+//   // console.log(id.toUpperCase());
+
+//   // type annotations 'Narrowing occurs'
+//   if (typeof id === "string") {
+//     console.log(id.toUpperCase());
+//   } else {
+//     console.log(id);
+//   }
+// }
+// printID(12);
+// printID("hello");
+function welcomePeople(x: string | string[]) {
+  if (Array.isArray(x)) {
+    console.log(`hello ${x.join(" and ")}`);
+  } else {
+    console.log(`hello ${x}`);
+  }
+}
+welcomePeople("Alex");
+welcomePeople(["Alex", "Briden"]);

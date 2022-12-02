@@ -1,14 +1,14 @@
-// step04_unions_literals
-let value = Math.random() > 0.5 ? "hello" : undefined;
-if (value) value.toUpperCase();
+//// step04_unions_literals
+// let value = Math.random() > 0.5 ? "hello" : undefined;
+// if (value) value.toUpperCase();
 
-value?.toUpperCase();
+// value?.toUpperCase();
 
-type dataTypes = boolean | string | number;
+// type dataTypes = boolean | string | number;
 
-let valu2: dataTypes;
+// let valu2: dataTypes;
 
-type dataTypesMayBe = dataTypes | undefined;
+// type dataTypesMayBe = dataTypes | undefined;
 
 // step05a_objects
 
@@ -28,13 +28,42 @@ type dataTypesMayBe = dataTypes | undefined;
 
 // }
 
-// //Interfaces
-interface Manager {
-  name: string;
-  subOrdinate?: number;
+// // //Interfaces
+// interface Manager {
+//   name: string;
+//   subOrdinate?: number;
+// }
+
+// let storeManager: Manager = {
+//   name: "Brad",
+//   // subOrdinate: 3,
+// };
+
+// //step05c
+
+interface Sphere {
+  diameter: number;
+}
+interface Ball {
+  diameter: number;
+}
+let ball: Ball = { diameter: 10 };
+let sphere: Sphere = { diameter: 20 };
+
+sphere = ball;
+ball = sphere;
+
+// If we add in a type which structurally contains all of
+// the members of Ball and Sphere, then it also can be
+// set to be a ball or sphere.
+
+interface Tube {
+  diameter: number;
+  length: number;
 }
 
-let storeManager: Manager = {
-  name: "Brad",
-  // subOrdinate: 3,
-};
+let tube: Tube = { diameter: 12, length: 3 };
+
+// tube = ball;//Error
+ball = tube;
+console.log(ball);

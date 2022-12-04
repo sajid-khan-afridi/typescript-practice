@@ -7,7 +7,7 @@
 // //unnecessary Type Annotations
 // let firstName: string = "Ahmad";
 
-//3.//Type Shapes
+// ////3.//Type Shapes
 // //we should use the allowed property or method to variable type e.g. string has toLowerCase()
 // let rapper = "Queen Latifah";
 // rapper.push();

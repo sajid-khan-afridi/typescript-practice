@@ -21,6 +21,7 @@ export {};
 
 // //3. Literal Types
 // //Literal Types is gone more specific to primitive type.
+//// Liter types can be string, number and boolean type
 //// hover over the below names.
 
 // let firstName = "Asif";
@@ -68,7 +69,7 @@ export {};
 // //we create one type aliase and can be used for many time
 // //type aliase can be used in pascal case
 
-// type RawData = boolean | number | string | null | undefined;
+// type RawData = boolean | number | string | null | undefined;//this is called type
 // let rawDataFirst: RawData;
 // let rawDataSecond: RawData;
 // let rawDataThird: RawData;

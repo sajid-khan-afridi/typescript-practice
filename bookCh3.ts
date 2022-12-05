@@ -4,8 +4,8 @@ export {};
 // //1.Union Types
 //where we don't know what the type of the value the variable is contained.
 
-let mathematician = Math.random() > 0.5 ? 70 : "Mark Goldberg";
-let name: string | null = null;
+// let mathematician = Math.random() > 0.5 ? 70 : "Mark Goldberg";
+// let name: string | null = null;
 // mathematician.toLowerCase(); //error
 
 // //2. Narrowing
@@ -25,7 +25,7 @@ let name: string | null = null;
 
 // let firstName = "Asif";
 // const lastName = "Ahmad";
-// // Here the TypeScript will infer the variable to be that the literal value i.e. "Ahmad" as a type.
+// // Here the TypeScript will infer the variable to be that the literal value i.e. "Ahmad" as a type. this is called literal types
 
 //// Primitive type is the set of all possible literal value of that type other than the boolean, undefined and null type.
 
@@ -48,15 +48,32 @@ let name: string | null = null;
 // // logica "&&" and optional "?." can perform truthiness check as well.
 
 //truthiness does not that much intelligent whether the string is undefined or an empty string
-let biologist = Math.random() > 0.5 && "Rachel Carson";
-if (biologist) {
-  biologist; // Type: string
-} else {
-  biologist; // Type: false | string
-}
+// let biologist = Math.random() > 0.5 && "Rachel Carson";
+// if (biologist) {
+//   biologist; // Type: string
+// } else {
+//   biologist; // Type: false | string
+// }
 
 // //4.2 Variables Without Initial Values
 // // TypeScript is smart enough to understand that the variable is undefined until a value is assigned
-let mathematician: string;
-mathematician?.length;
-// // Error: Variable 'mathematician' is used before being assigned.
+// let mathematician: string;
+// mathematician?.length; // Error: Variable 'mathematician' is used before being assigned.
+// let mathematician: string | undefined;
+// mathematician?.length; // Ok
+
+// //5. Type Aliases
+
+// //type aliases ease the process of declaring the type to each and every variable
+// //we create one type aliase and can be used for many time
+// //type aliase can be used in pascal case
+
+// type RawData = boolean | number | string | null | undefined;
+// let rawDataFirst: RawData;
+// let rawDataSecond: RawData;
+// let rawDataThird: RawData;
+
+// // Combining Type Aliases
+//type Id = number | string;
+//// Equivalent to: number | string | undefined | null
+//type IdMaybe = Id | undefined | null;

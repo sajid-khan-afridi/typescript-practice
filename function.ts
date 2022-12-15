@@ -16,3 +16,10 @@ let addnum2: fn = function (a, b) {
 let addnum: (x: number, y: number) => number = function (a, b) {
   return a + b;
 };
+
+//3. callback function
+type fn2 = (a: string) => void;
+
+function fun1(callback: fn2) {
+  callback("hello");
+}

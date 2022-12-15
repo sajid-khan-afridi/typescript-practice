@@ -1,5 +1,6 @@
 function buildName(firstName: string, ...restOfName: string[]) {
   //Named function with Rest parameters
+  console.log(restOfName);
   return firstName + " " + restOfName.join(" ");
 }
 

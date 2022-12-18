@@ -36,13 +36,19 @@
 // //console.log(Rectangle4.name); // error
 
 // //Miss Faiza Aziz class code practice
+
+//readonly will prevent assignment to the field without the constructor
 class Car {
-  model: string;
-  color: string;
+  readonly model: string;
+  readonly color: string;
+  readonly year: number;
   licence!: string;
-  constructor(model: string, color: string) {
-    this.model = model;
+  constructor(model_a: string, color: string);
+  constructor(model_b: string, color: string, year: number);
+  constructor(model_ab: any, color: any, year?: any) {
+    this.model = model_ab;
     this.color = color;
+    this.year = year;
   }
   displayAll() {
     return `${this.color} ${this.model}`;
@@ -53,14 +59,19 @@ class Car {
   set Licence(val: string) {
     this.licence = val;
   }
+  // set Licence(val) {
+  //   //val will infer from get return
+  //   this.licence = val;
+  // }
 }
 const civic = new Car("2022", "blue");
 const honda = new Car("2000", "black");
 
 console.log(civic.displayAll());
 console.log(honda.displayAll());
+// civic.color="any value"
 
-honda.Licence = "str123"; //set is used here
+// honda.Licence = "str123"; //set is used here
 console.log(honda.Licence); //get is used here
 
 honda.licence = "newstr";

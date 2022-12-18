@@ -32,10 +32,12 @@
 // console.log(Rectangle.name); // "Rectangle2"
 // //console.log(Rectangle4.name); // error
 // //Miss Faiza Aziz class code practice
+//readonly will prevent assignment to the field without the constructor
 class Car {
-    constructor(model, color) {
-        this.model = model;
+    constructor(model_ab, color, year) {
+        this.model = model_ab;
         this.color = color;
+        this.year = year;
     }
     displayAll() {
         return `${this.color} ${this.model}`;
@@ -51,7 +53,8 @@ const civic = new Car("2022", "blue");
 const honda = new Car("2000", "black");
 console.log(civic.displayAll());
 console.log(honda.displayAll());
-honda.Licence = "str123"; //set is used here
+// civic.color="any value"
+// honda.Licence = "str123"; //set is used here
 console.log(honda.Licence); //get is used here
 honda.licence = "newstr";
 console.log(honda.licence);

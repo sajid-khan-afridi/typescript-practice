@@ -3,6 +3,7 @@
 
 //2. //Type Annotations
 // //used to indicate the datatypes of variables and input/outputs of functions and methods.
+//explicitly specify the type of the variable
 //let rocker:string;
 // //unnecessary Type Annotations
 // let firstName: string = "Ahmad";

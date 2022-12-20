@@ -125,5 +125,21 @@ export {};
 // }
 
 // //                            step06_explict_casting
-let myname: unknown = "Zia";
-console.log((myname as string).toUpperCase());
+// let myname: unknown = "Zia";
+// console.log((myname as string).toUpperCase());
+// console.log((<string>myname).toLowerCase());
+
+// //                             step07a_enum
+// const enum color {
+//   red = 3,
+//   green,
+//   blue,
+// }
+// let index: number = color.blue;
+// index = color["green"];
+
+// // let value = color[3];
+
+// //                               step08_arrays
+let arr: number[] = [1, 2, 3, 4, 5, 6, 7];
+let arr2: Array<number> = [8, 9, 10];

@@ -26,7 +26,7 @@ export {};
 // console.log(student.age);
 // console.log(student["age"]);
 
-// //step05b_object_aliased
+// //               step05b_object_aliased
 // let teacher: { name: string; age: number } = { name: "alex", age: 33 };
 // console.log(teacher);
 // // aliased object type
@@ -46,10 +46,10 @@ export {};
 // obj1=obj2;
 // // // case#2a renaming existing property
 // // obj1={id:5,names:"kashif"};
-// // //case#2b 
+// // //case#2b
 
 // //case#3 adding excessive property
-// // fresh here we can not add excessive property 
+// // fresh here we can not add excessive property
 // obj1={id:1,name:"khanwali",age:25};
 // //stale we can add excessive property
 // let obj3={id:1,name:"khanwali",age:25};
@@ -61,8 +61,6 @@ export {};
 // var y: { foo: number, bar?: number };
 // y = { foo: 1, baz: 2 };  // Error, excess or misspelled property `baz`
 
-
-
 // var a: { foo: number };
 // var a1 = { foo: 1, baz: 2 };
 // a = a1;//No Error
@@ -71,21 +69,61 @@ export {};
 // var z1 = { foo: 1, baz: 2 };
 // z = z1;//No Error
 
-// step05d_nested_objects
-type Author={
-  fname:string;
-  lname:string;
-};
-<<<<<<< HEAD
-let Teacher1: teacher1 = { name: "alex", age: 33 };
-//interface
-interface Teacher2
-=======
-type Book={
-  author:Author
-  name:string;
-  };
-let book:Book={
+//                    step05d_nested_objects
+// type Author = {
+//   fname: string;
+//   lname: string;
+// };
+// type Book = {
+//   author: Author;
+//   name: string;
+// };
+// interface Author {
+//   fname: string;
+//   lname: string;
+// }
+// type Book = {
+//   author: Author;
+//   name: string;
+// };
+// let book: Book = {
+//   author: {
+//     fname: "Sajid",
+//     lname: "afridi",
+//   },
+//   name: "intro to javascript",
+// };
 
-}
->>>>>>> 492074a72255fa576cdabe363c042562c2d9cbb4
+// // //                     step05e_intersection_types
+// interface name {
+//   name: string;
+// }
+// interface lname {
+//   lname: string;
+// }
+// type fname = name & lname;
+// let Fullname: fname = {
+//   name: "Sajid",
+//   lname: "afridi",
+// };
+
+// // //                       step05f_any__unknown_never_types
+// let val1: any;
+// let val2: unknown;
+// val1 = val2;
+
+// let val3: number = val2;
+
+// function error(message: string): never {
+//   throw new Error(message);
+// }
+// function fun1() {
+//   return error("message");
+// }
+// function infinit(): never {
+//   while (true) {}
+// }
+
+// //                            step06_explict_casting
+let myname: unknown = "Zia";
+console.log((myname as string).toUpperCase());

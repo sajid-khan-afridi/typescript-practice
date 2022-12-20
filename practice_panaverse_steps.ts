@@ -34,3 +34,5 @@ type teacher1 = {
   age: number;
 };
 let Teacher1: teacher1 = { name: "alex", age: 33 };
+//interface
+interface Teacher2

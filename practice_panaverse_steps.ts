@@ -141,5 +141,7 @@ export {};
 // // let value = color[3];
 
 // //                               step08_arrays
-let arr: number[] = [1, 2, 3, 4, 5, 6, 7];
-let arr2: Array<number> = [8, 9, 10];
+// let arr: number[] = [1, 2, 3, 4, 5, 6, 7];
+// let arr2: Array<number> = [8, 9, 10];
+
+// //                               step09a_functions

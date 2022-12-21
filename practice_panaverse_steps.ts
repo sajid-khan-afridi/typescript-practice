@@ -145,3 +145,22 @@ export {};
 // let arr2: Array<number> = [8, 9, 10];
 
 // //                               step09a_functions
+
+type fn = (x: number, y: number) => number;
+
+let add: fn = function (x, y) {
+  return x + y;
+};
+
+let sub: (x: number, y: number) => number = function (x, y) {
+  return x - y;
+};
+
+let mul = (x: number, y: number) => x * y;
+let add_mess = function (
+  msg: string,
+  callback: (x: number, y: number) => number
+) {
+  callback(x, y);
+};
+add_mess("hello", mul(1, 2));

@@ -146,29 +146,65 @@ export {};
 
 // //                               step09a_functions
 
-type fn = (x: number, y: number) => number;
+// type fn = (x: number, y: number) => number;
 
-let add: fn = function (x, y) {
+// let add: fn = function (x, y) {
+//   return x + y;
+// };
+
+// let sub: (x: number, y: number) => number = function (x, y) {
+//   return x - y;
+// };
+
+// // //     callback example1
+// let mul = (x: number, y: number) => x * y;
+// let mulcallback = function (x: number, y: number, callback: fn) {
+//   callback(x, y);
+// };
+// mulcallback(2, 4, mul);
+
+// // //     callback example2
+// type fn2 = (x: string) => void;
+// function display(x: string) {
+//   console.log(x);
+// }
+// let fun = (msg: string, callback: fn2) => {
+//   callback(msg);
+// };
+// fun("hello", display);
+
+// //                           step09d_function_default_parameter
+// let sum: (x: number, y?: number) => number = function (
+//   x: number,
+//   y = 5
+// ): number {
+//   return x + y;
+// };
+
+// function sum2(x: number, y = 5): number {
+//   return x + y;
+// }
+
+// //                           step09e_function_rest_parameter
+
+// function buildname(fname: string, ...restparam: string[]) {
+//   console.log(`${fname} ${restparam.join(" ")}`);
+// }
+// buildname("sajid", "as", "sd", "ds", "dd");
+// //anonymous function type with Rest parameters
+// let buildNameFun: (fname: string, ...restparam: string[]) => string = function (
+//   fname: string,
+//   ...params: string[]
+// ) {
+//   return fname + " " + params.join(" ");
+// };
+
+// //                           step09g_function_overloads
+function add(x: number, y: number): number;
+function add(x: string, y: string): string;
+function add(x: boolean, y: boolean): boolean;
+function add(x: any, y: any): any {
   return x + y;
-};
-
-let sub: (x: number, y: number) => number = function (x, y) {
-  return x - y;
-};
-
-// //     callback example1
-let mul = (x: number, y: number) => x * y;
-let mulcallback = function (x: number, y: number, callback: fn) {
-  callback(x, y);
-};
-mulcallback(2, 4, mul);
-
-// //     callback example2
-type fn2 = (x: string) => void;
-function display(x: string) {
-  console.log(x);
 }
-let fun = (msg: string, callback: fn2) => {
-  callback(msg);
-};
-fun("hello", display);
+add("a", "b");
+add(1, 3);

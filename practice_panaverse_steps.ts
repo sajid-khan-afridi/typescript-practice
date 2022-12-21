@@ -156,11 +156,19 @@ let sub: (x: number, y: number) => number = function (x, y) {
   return x - y;
 };
 
+// //     callback example1
 let mul = (x: number, y: number) => x * y;
-let add_mess = function (
-  msg: string,
-  callback: (x: number, y: number) => number
-) {
+let mulcallback = function (x: number, y: number, callback: fn) {
   callback(x, y);
 };
-add_mess("hello", mul(1, 2));
+mulcallback(2, 4, mul);
+
+// //     callback example2
+type fn2 = (x: string) => void;
+function display(x: string) {
+  console.log(x);
+}
+let fun = (msg: string, callback: fn2) => {
+  callback(msg);
+};
+fun("hello", display);

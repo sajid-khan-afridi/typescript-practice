@@ -4,9 +4,9 @@ export {};
 // //1.Union Types
 //where we don't know what the type of the value the variable is contained.
 
-let mathematician = Math.random() > 0.5 ? 70 : "Mark Goldberg";
-let name: string | null = null;
-mathematician.toLowerCase(); //error
+// let mathematician = Math.random() > 0.5 ? 70 : "Mark Goldberg";
+// let name: string | null = null;
+// mathematician.toLowerCase(); //error
 
 // //2. Narrowing
 //The above situation need to treat more specific way called narrowing
@@ -21,7 +21,7 @@ mathematician.toLowerCase(); //error
 
 // //3. Literal Types
 // //Literal Types is gone more specific to primitive type.
-//// Liter types can be string, number and boolean type
+//// Literal types can be string, number and boolean type
 //// hover over the below names.
 
 // let firstName = "Asif";
@@ -32,7 +32,7 @@ mathematician.toLowerCase(); //error
 
 // //4.Strict Null Checking
 
-//const firstName: string = null;
+// const firstName: string = null;
 ////In TypeScript, strictNullChecks(tsconfig.json) is by defualt false
 
 // //4.1 Truthiness Narrowing
@@ -46,8 +46,9 @@ mathematician.toLowerCase(); //error
 
 // geneticist && geneticist.toUpperCase(); // Ok: string | undefined
 // geneticist?.toUpperCase(); // Ok: string | undefined
-// // logica "&&" and optional "?." can perform truthiness check as well.
+// // logical "&&" and optional "?." can perform truthiness check as well.
 
+//REPEAT
 //truthiness does not that much intelligent whether the string is undefined or an empty string
 // let biologist = Math.random() > 0.5 && "Rachel Carson";
 // if (biologist) {
@@ -56,10 +57,12 @@ mathematician.toLowerCase(); //error
 //   biologist; // Type: false | string
 // }
 
+//REPEAT
 // //4.2 Variables Without Initial Values
 // // TypeScript is smart enough to understand that the variable is undefined until a value is assigned
 // let mathematician: string;
 // mathematician?.length; // Error: Variable 'mathematician' is used before being assigned.
+
 // let mathematician: string | undefined;
 // mathematician?.length; // Ok
 

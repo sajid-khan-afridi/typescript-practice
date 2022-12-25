@@ -4,9 +4,9 @@ export {};
 // //1.Union Types
 //where we don't know what the type of the value the variable is contained.
 
-// let mathematician = Math.random() > 0.5 ? 70 : "Mark Goldberg";
-// let name: string | null = null;
-// mathematician.toLowerCase(); //error
+let mathematician = Math.random() > 0.5 ? 70 : "Mark Goldberg";
+let name: string | null = null;
+mathematician.toLowerCase(); //error
 
 // //2. Narrowing
 //The above situation need to treat more specific way called narrowing

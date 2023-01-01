@@ -1,15 +1,15 @@
 //                      //class
-var Student = /** @class */ (function () {
-    function Student(name) {
-        this.name = name;
-    }
-    Student.prototype.getName = function () {
-        return this.name;
-    };
-    return Student;
-}());
-var obj = new Student("Ahmad");
-console.log(obj.getName());
+// class Student {
+//   name: string;
+//   constructor(name: string) {
+//     this.name = name;
+//   }
+//   getName() {
+//     return this.name;
+//   }
+// }
+// let obj = new Student("Ahmad");
+// console.log(obj.getName());
 //                      //readonly
 // class Greeter {
 //   readonly name: string;
@@ -32,11 +32,31 @@ console.log(obj.getName());
 //   }
 // }
 // class Derived extends Base {
-//   constructor() {
+//   constructor(m: string) {
 //     // Prints a wrong value in ES5; throws exception in ES6
 //     super(5);
 //     console.log(this.k);
 //     // 'super' must be called before accessing 'this' in the constructor of a derived class.
 //   }
 // }
-// export {};
+//                                //Getters / Setters
+var C = /** @class */ (function () {
+    function C() {
+        this._length = 0;
+    }
+    Object.defineProperty(C.prototype, "length", {
+        get: function () {
+            return this._length;
+        },
+        set: function (value) {
+            this._length = value;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    return C;
+}());
+var obj = new C();
+// obj._length = 5;
+// obj.length = 5;
+console.log(obj.length);

@@ -1,16 +1,16 @@
 //                      //class
 
-class Student {
-  name: string;
-  constructor(name: string) {
-    this.name = name;
-  }
-  getName() {
-    return this.name;
-  }
-}
-let obj = new Student("Ahmad");
-console.log(obj.getName());
+// class Student {
+//   name: string;
+//   constructor(name: string) {
+//     this.name = name;
+//   }
+//   getName() {
+//     return this.name;
+//   }
+// }
+// let obj = new Student("Ahmad");
+// console.log(obj.getName());
 
 //                      //readonly
 
@@ -39,10 +39,25 @@ console.log(obj.getName());
 // }
 
 // class Derived extends Base {
-//   constructor() {
+//   constructor(m: string) {
 //     // Prints a wrong value in ES5; throws exception in ES6
 //     super(5);
 //     console.log(this.k);
 //     // 'super' must be called before accessing 'this' in the constructor of a derived class.
 //   }
 // }
+
+//                                //Getters / Setters
+class C {
+  _length = 0;
+  get length() {
+    return this._length;
+  }
+  set length(value) {
+    this._length = value;
+  }
+}
+const obj = new C();
+// obj._length = 5;
+// obj.length = 5;
+console.log(obj.length);

@@ -1,5 +1,4 @@
 //                      //readonly
-export {};
 
 class Greeter {
   readonly name: string;

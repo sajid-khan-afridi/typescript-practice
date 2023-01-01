@@ -1,5 +1,4 @@
-"use strict";
-exports.__esModule = true;
+//                      //readonly
 var Greeter = /** @class */ (function () {
     function Greeter(name) {
         this.name = name;
